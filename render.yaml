@@ -1,6 +1,7 @@
 services:
   - type: web
     name: surakshit-marg-safety-advisor
+    plan: free
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn wsgi:app
