@@ -16,7 +16,7 @@ class RiskFactor:
 
 TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     "speeding": RiskFactor(
-        penalty=22,
+        penalty=35,
         focus="Vehicle speed and driver attention",
         precautions=(
             "Slow down and follow posted speed limits.",
@@ -25,7 +25,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Speeding / high vehicle speed",
     ),
     "phone": RiskFactor(
-        penalty=18,
+        penalty=24,
         focus="Driver or pedestrian distraction",
         precautions=(
             "Avoid phone use while walking or driving near roads.",
@@ -43,11 +43,11 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Rain / wet road",
     ),
     "fog": RiskFactor(
-        penalty=14,
+        penalty=13,
         focus="Road and weather conditions",
         precautions=(
             "Use low-beam lights in fog.",
-            "Drive slowly and maintain extra distance.",
+            "Use headlights and drive more carefully.",
         ),
         label="Fog / low visibility",
     ),
@@ -61,16 +61,16 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Night / poor lighting",
     ),
     "dark": RiskFactor(
-        penalty=11,
+        penalty=12,
         focus="Visibility of road users",
         precautions=(
-            "Use lights and reflective materials.",
+            "Use lighting and reflective materials.",
             "Slow down and scan blind spots.",
         ),
         label="Low light conditions",
     ),
     "child": RiskFactor(
-        penalty=9,
+        penalty=10,
         focus="Protection of children near roads",
         precautions=(
             "Use extra caution where children are present.",
@@ -79,7 +79,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Children near road",
     ),
     "children": RiskFactor(
-        penalty=9,
+        penalty=10,
         focus="Protection of children near roads",
         precautions=(
             "Use extra caution where children are present.",
@@ -88,7 +88,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Children near road",
     ),
     "crossing": RiskFactor(
-        penalty=10,
+        penalty=9,
         focus="Pedestrian crossing behavior",
         precautions=(
             "Cross only at safe, marked, or signalized points.",
@@ -97,7 +97,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Active road crossing",
     ),
     "obstruction": RiskFactor(
-        penalty=12,
+        penalty=14,
         focus="Visibility of road users",
         precautions=(
             "Move to a point with clear sight lines before crossing.",
@@ -122,7 +122,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
 
 CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
     "pedestrian_present": RiskFactor(
-        penalty=8,
+        penalty=10,
         focus="Pedestrian protection",
         precautions=(
             "Drivers should slow down and prepare to stop for pedestrians.",
@@ -149,7 +149,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Obstruction blocking view",
     ),
     "distracted_driver": RiskFactor(
-        penalty=19,
+        penalty=21,
         focus="Driver attention and behavior",
         precautions=(
             "Eliminate distractions while driving.",
@@ -158,7 +158,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Distracted driver",
     ),
     "speeding_high_vehicle_speed": RiskFactor(
-        penalty=23,
+        penalty=35,
         focus="Vehicle speed and stopping distance",
         precautions=(
             "Reduce speed immediately.",
