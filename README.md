@@ -1,11 +1,11 @@
-## Surakshit Marg - Road Safety Advisor
+# Surakshit Marg - Road Safety Advisor
 
 This is for my school. Since my school is participating in an external competition, they had asked me to create something based off of it so yaa.
 
 Essentially, it kinda acts like an interactive app for students to learn road safety from. Planning on adding image classification later on, but for now it's simple python stuff.
             It tells you the level of risk a certain road condition has, and who or what is the main priority and how to mitigate the risks with precautions.
 
-## Features
+# Features
 Users have 2 choices:
                     1. Click the chech boxes on the condition of the scenario to get safety score
                     2. Enter the situation as a sentence in the textbox to get safety score
@@ -29,8 +29,7 @@ An interactive game to make it better
 
 
 # Project structure
-`app.py` - Python-Flask backend for scenario scoring 
-`wsgi.py` - WSGI entrypoint for deployment
+`app.py` - Python-Flask backend for scenario scoring- `wsgi.py` - WSGI entrypoint for deployment
 `templates/index.html` - Main UI
 `static/styles.css` - UI styling
 `static/app.js` - UI
