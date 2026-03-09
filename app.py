@@ -26,7 +26,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "phone": RiskFactor(
         penalty=24,
-        focus="Driver or pedestrian distracted",
+        focus="Driver or pedestrian who's distracted",
         precautions=(
             "Avoid use of phone while walking near or on roads.",
             "Do not use phone while driving. Connect to blutooth if call is urgent",
@@ -55,7 +55,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "night": RiskFactor(
         penalty=12,
-        focus="Visibility of road users",
+        focus="Visibility of drivers or pedestrians",
         precautions=(
             "Wear reflective or bright clothing at night.",
             "Use proper headlights and road-side lighting.",
@@ -64,7 +64,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "dark": RiskFactor(
         penalty=12,
-        focus="Visibility of road users",
+        focus="Visibility of drivers or pedestrians",
         precautions=(
             "Use light or headlight.",
             "Wear reflective shoes or neon outfits",
@@ -74,7 +74,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "child": RiskFactor(
         penalty=10,
-        focus="Protection of children near roads",
+        focus="Protection and safety of children near roads",
         precautions=(
             "Use extra caution where children are present.",
             "Reduce speed near schools and play areas.",
@@ -84,7 +84,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "children": RiskFactor(
         penalty=10,
-        focus="Protection of children near roads",
+        focus="Protection and safety of children near roads",
         precautions=(
             "Be extra cautious where children are present.",
             "Reduce speed near schools and play areas.",
@@ -94,7 +94,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "crossing": RiskFactor(
         penalty=9,
-        focus="Pedestrian crossing behavior",
+        focus="Safe crossing behaviour of pedestrians",
         precautions=(
             "Cross only at safe points.",
             "Look both ways and confirm vehicles have stopped or slowed down or at a safe distance",
@@ -105,7 +105,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "obstruction": RiskFactor(
         penalty=14,
-        focus="Visibility of road users",
+        focus="Visibility of drivers and pedestrians",
         precautions=(
             "Move to a point with clear sight before crossing.",
             "Avoid stepping out from behind parked vehicles.",
@@ -114,13 +114,13 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "helmet": RiskFactor(
         penalty=-8,
-        focus="Rider protection",
+        focus="Protection of rider",
         precautions=("Well done!! Continue wearing a properly fitted helmet.",),
         label="Helmet in use",
     ),
     "seatbelt": RiskFactor(
         penalty=-8,
-        focus="Passenger protection",
+        focus="Protection of passenger",
         precautions=("Ensure all passengers use seatbelts.",),
         label="Seatbelt in use",
     ),
@@ -130,7 +130,7 @@ TEXT_RISK_FACTORS: Dict[str, RiskFactor] = {
 CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
     "pedestrian_present": RiskFactor(
         penalty=10,
-        focus="Pedestrian protection",
+        focus="Protection of pedestrians",
         precautions=(
             "Drivers should slow down or prepare to stop for pedestrians.",
             "Cross only at safe points.",
@@ -142,7 +142,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "night_poor_lighting": RiskFactor(
         penalty=14,
-        focus="Visibility of road users",
+        focus="Visibility of drivers and pedestrians",
         precautions=(
             "Use light or headlight.",
             "Wear reflective shoes or neon outfits",
@@ -152,7 +152,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "obstruction_blocking_view": RiskFactor(
         penalty=13,
-        focus="Visibility of road users",
+        focus="Visibility of drivers and pedestrians",
         precautions=(
             "Choose to cross at places with clear visibility.",
             "Avoid crossing between parked or stopped vehicles.",
@@ -161,7 +161,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "distracted_driver": RiskFactor(
         penalty=21,
-        focus="Driver attention and behavior",
+        focus="Attention of driver",
         precautions=(
             "Have full attention on road, pedestrians and signals.",
             "Do not use phone while driving. Connect to blutooth if call is urgent",
@@ -171,7 +171,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
     ),
     "speeding_high_vehicle_speed": RiskFactor(
         penalty=35,
-        focus="Vehicle speed and stopping distance",
+        focus="Speed of vehicle and distance between the vechicles behind and infront",
         precautions=(
             "Slow down and follow speed limits",
             "Keep a safe distance from vehicles infront and behind you.",
