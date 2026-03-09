@@ -190,7 +190,7 @@ RISK_MESSAGES: Dict[str, str] = {
 
 
 def classify_risk(score: int) -> str:
-    if score >= 85:
+    if score >= 91:
         return "No risk"
     if score >= 65:
         return "Low risk"
