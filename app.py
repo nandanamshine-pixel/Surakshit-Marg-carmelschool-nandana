@@ -179,12 +179,12 @@ RISK_MESSAGES: Dict[str, str] = {
 
 def classify_risk(score: int) -> str:
     if score >= 85:
-        return "High risk"
+        return "No risk"
     if score >= 65:
-        return "Medium risk"
-    if score >= 40:
         return "Low risk"
-    return "No risk"
+    if score >= 40:
+        return "Medium risk"
+    return "High risk"
 
 
 def default_result() -> dict:
