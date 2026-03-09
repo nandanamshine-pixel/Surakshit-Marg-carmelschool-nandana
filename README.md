@@ -29,7 +29,8 @@ An interactive game to make it better
 
 
 # Project structure
-`app.py` - Python-Flask backend for scenario scoring- `wsgi.py` - WSGI entrypoint for deployment
+`app.py` - Python-Flask backend for scenario scoring 
+`wsgi.py` - WSGI entrypoint for deployment
 `templates/index.html` - Main UI
 `static/styles.css` - UI styling
 `static/app.js` - UI
