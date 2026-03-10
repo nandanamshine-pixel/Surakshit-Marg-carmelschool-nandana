@@ -19,6 +19,13 @@
             <button id="saveBoardBtn" class="btn btn-save" type="button">Save to board</button>
         </header>
 
+        <section class="hero-banner" aria-label="Hero image area">
+            <div class="hero-top-pill">
+                <span class="hero-badge" aria-hidden="true">&#127891;</span>
+            </div>
+            <div class="hero-art" title="Set your hero image in CSS variable --hero-picture"></div>
+        </section>
+
         <main class="layout-grid">
             <section class="panel panel-left">
                 <form method="post" class="left-form" id="riskForm" enctype="multipart/form-data">
@@ -105,4 +112,3 @@
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
-
