@@ -7,70 +7,70 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="page-shell">
-        <header class="page-header">
-            <div class="title-wrap">
+    <div class="pageshell">
+        <header class="pageheader">
+            <div class="titlewrap">
                 <span class="signal" aria-hidden="true">&#128678;</span>
                 <div>
                     <h1>Surakshit Marg</h1>
                     <p>Upload photo or describe a scenario to get started!! Use Predict and Save to board to see your score!!</p>
                 </div>
             </div>
-            <button id="saveBoardBtn" class="btn btn-save" type="button">Save to board</button>
+            <button id="saveBoardBtn" class="button button-save" type="button">Save to board</button>
         </header>
 
-        <section class="hero-banner" aria-label="Hero image area">
-            <div class="hero-top-pill">
-                <span class="hero-badge" aria-hidden="true">&#127891;</span>
+        <section class="bannerpic" aria-label="Hero image area">
+            <div class="top-pic">
+                <span class="idk" aria-hidden="true">&#127891;</span>
             </div>
-            <div class="hero-art" title="Set your hero image in CSS variable --hero-picture"></div>
+            <div class="main-pic" title="Set your hero image in CSS variable --mainpic"></div>
         </section>
 
         <main class="layout-grid">
             <section class="panel panel-left">
                 <form method="post" class="left-form" id="riskForm" enctype="multipart/form-data">
                     <h2>Upload image (optional)</h2>
-                    <div class="upload-box">
+                    <div class="uploadbox">
                         <input type="file" id="scenarioImage" name="scenario_image" accept="image/png,image/jpeg">
                         <span>PNG/JPG (preview shown right)</span>
                     </div>
 
-                    <label class="section-label" for="scenario">Short description / location</label>
+                    <label class="sectionlabel" for="scenario">Short description / location</label>
                     <textarea id="scenario" name="scenario" rows="2" placeholder="Children playing near road, car approaching...">{{ scenario_text }}</textarea>
 
                     <h3>Toggle hazards</h3>
-                    <label class="hazard"><input type="checkbox" name="checks" value="pedestrian_present" {% if 'pedestrian_present' in selected_checks %}checked{% endif %}> Pedestrian present?</label>
-                    <label class="hazard"><input type="checkbox" name="checks" value="night_poor_lighting" {% if 'night_poor_lighting' in selected_checks %}checked{% endif %}> Night / poor lighting?</label>
-                    <label class="hazard"><input type="checkbox" name="checks" value="obstruction_blocking_view" {% if 'obstruction_blocking_view' in selected_checks %}checked{% endif %}> Obstruction blocking view?</label>
-                    <label class="hazard"><input type="checkbox" name="checks" value="distracted_driver" {% if 'distracted_driver' in selected_checks %}checked{% endif %}> Distracted driver?</label>
-                    <label class="hazard"><input type="checkbox" name="checks" value="speeding_high_vehicle_speed" {% if 'speeding_high_vehicle_speed' in selected_checks %}checked{% endif %}> Speeding / high vehicle speed?</label>
+                    <label class="hazard"><input class="inputhazard" type="checkbox" name="checks" value="pedestrian_present" {% if 'pedestrian_present' in selected_checks %}checked{% endif %}> Pedestrian present?</label>
+                    <label class="hazard"><input class="inputhazard" type="checkbox" name="checks" value="night_poor_lighting" {% if 'night_poor_lighting' in selected_checks %}checked{% endif %}> Night / poor lighting?</label>
+                    <label class="hazard"><input class="inputhazard" type="checkbox" name="checks" value="obstruction_blocking_view" {% if 'obstruction_blocking_view' in selected_checks %}checked{% endif %}> Obstruction blocking view?</label>
+                    <label class="hazard"><input class="inputhazard" type="checkbox" name="checks" value="distracted_driver" {% if 'distracted_driver' in selected_checks %}checked{% endif %}> Distracted driver?</label>
+                    <label class="hazard"><input class="inputhazard" type="checkbox" name="checks" value="speeding_high_vehicle_speed" {% if 'speeding_high_vehicle_speed' in selected_checks %}checked{% endif %}> Speeding / high vehicle speed?</label>
 
-                    <div class="action-row">
-                        <button class="btn btn-predict" type="submit">Predict</button>
-                        <button class="btn btn-clear" id="clearBtn" type="button">Clear</button>
+                    <div class="action">
+                        <button class="button button-predict" type="submit">Predict</button>
+                        <button class="button button-clear" id="clearBtn" type="button">Clear</button>
                     </div>
 
-                    <div class="history-block">
+                    <div class="history">
                         <h3>History (saved scenarios)</h3>
                         <p id="historyCount">0 saved</p>
-                        <ul id="historyList"></ul>
+                        <ul id="historylist"></ul>
                     </div>
                 </form>
             </section>
 
             <section class="panel panel-right">
-                <div class="result-grid">
+                <div class="result">
                     <div>
-                        <h2 class="risk-title {{ result.category|lower|replace(' ', '-') }}">{{ result.category|upper }}</h2>
-                        <p class="score-line">Score: {{ '%.1f'|format(result.score|float) }} - Top factor: {{ result.top_factor }}</p>
-                        <p class="result-message {{ result.category|lower|replace(' ', '-') }}">{{ result.message }}</p>
+                        <h2 class="risktitle {{ result.category|lower|replace(' ', '-') }} {{ result.category|lower|replace(' ', '') }}">{{ result.category|upper }}</h2>
+                        <p class="score">Score: {{ '%.1f'|format(result.score|float) }} - Top factor: {{ result.top_factor }}</p>
+                        <p class="result-msg {{ result.category|lower|replace(' ', '-') }} {{ result.category|lower|replace(' ', '') }}">{{ result.message }}</p>
 
-                        <div class="focus-box">
+                        <div class="focus">
                             <h3>Most important control</h3>
                             <p>{{ result.primary_focus }}</p>
                         </div>
 
-                        <div class="precautions-box">
+                        <div class="precautions">
                             <h3>Precautions to take</h3>
                             <ul>
                                 {% for item in result.precautions %}
@@ -80,15 +80,15 @@
                         </div>
 
                         <h3>Preview</h3>
-                        <div class="preview-box" id="previewBox">
+                        <div class="preview" id="previewBox">
                             <img id="previewImage" alt="Scenario preview">
                             <p id="previewText">No image uploaded</p>
                         </div>
                     </div>
 
-                    <aside class="controls-col">
+                    <aside class="controls">
                         <h3>Controls</h3>
-                        <button id="autoPedestrianBtn" class="btn btn-auto" type="button">Auto-check 'Pedestrian' from description</button>
+                        <button id="autoPedestrianBtn" class="button button-auto" type="button">Auto-check 'Pedestrian' from description</button>
                         <p class="tip">Tip: include words like "children", "fast", "night".</p>
 
                         <div class="saved-block">

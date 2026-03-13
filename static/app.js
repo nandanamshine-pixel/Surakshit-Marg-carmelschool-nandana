@@ -9,7 +9,7 @@
     const autoPedestrianBtn = document.getElementById("autoPedestrianBtn");
     const clearBtn = document.getElementById("clearBtn");
     const saveBoardBtn = document.getElementById("saveBoardBtn");
-    const historyList = document.getElementById("historyList");
+    const historyList = document.getElementById("historylist");
     const historyCount = document.getElementById("historyCount");
     const savedCountRight = document.getElementById("savedCountRight");
 
@@ -99,3 +99,4 @@
 
     renderSavedItems();
 })();
+
