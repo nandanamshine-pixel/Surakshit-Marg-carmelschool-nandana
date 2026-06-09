@@ -170,7 +170,7 @@ CHECKBOX_RISK_FACTORS: Dict[str, RiskFactor] = {
         label="Distracted driver",
     ),
     "speeding_high_vehicle_speed": RiskFactor(
-        penalty=35,
+        penalty=45,
         focus="Speed of vehicle and distance between the vechicles behind and infront",
         precautions=(
             "Slow down and follow speed limits",
