@@ -12,7 +12,7 @@
     --line: #d4dee8;
     --danger: #be2c2c;
     --warn: #bd7f13;
-    --hero-picture: url("C:\Users\drshi\OneDrive\Pictures\Screenshots\Screenshot 2026-03-09 224842.png");
+    --hero-picture: url("/static/hero-banner.png");
 }
 
 * {
