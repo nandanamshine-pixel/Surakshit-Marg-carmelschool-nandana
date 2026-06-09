@@ -101,36 +101,16 @@ h1 {
 }
 
 .hero-art {
-    height: 180px;
+    height: 260px;
     border-radius: 22px;
     position: relative;
     overflow: hidden;
     border: 1px solid #c8dcf8;
-    background-image: var(--hero-picture), linear-gradient(180deg, #e6f4ff 0%, #cfe8ff 100%);
-    background-size: cover;
+    background-color: #ebf5ff;
+    background-image: var(--hero-picture);
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-}
-
-.hero-art::before,
-.hero-art::after {
-    content: "";
-    position: absolute;
-    left: -8%;
-    right: -8%;
-    border-radius: 100%;
-}
-
-.hero-art::before {
-    height: 120px;
-    bottom: -52px;
-    background: #b9d975;
-}
-
-.hero-art::after {
-    height: 95px;
-    bottom: -50px;
-    background: #7ea400;
-    transform: translateX(4%);
 }
 
 .layout-grid {
